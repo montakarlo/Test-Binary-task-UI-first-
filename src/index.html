@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+  <nav class="menu">
+    <a href="index.html"><img class="logo" src="img/logo.png" alt="logo"></a>
+    <div class="iconsContainer">
+      <i class="fas fa-bell bell"></i>
+      <label class="circleName" for="toggle">А</label>
+      <input type="checkbox" id="toggle">
+        <div class="dropMenu">
+          <p class="name">Alik Rakhmonov</p>
+          <hr>
+          <div class="dropMenu__links">
+            <a href="#">Profile</a>
+            <a href="#">Log Out</a>
+          </div>
+        </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="cardsContainer">
+      <div class="cardsContainer__item cardsContainer__item_binaryStudio">
+        <div class="card">
+          <div class="cardInner cardInner_flip">
+            <div class="cardFront cardFront_flip cardFront_flip_binaryStudio">
+              <img class="binary_logo" src="/img/binary_logo.png" alt="Binary_logo">
+            </div>
+            <div class="cardBack cardBack_flip">
+              <a href="#" class="join_button">Join</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cardsContainer__item cardsContainer__item_qa">
+        <div class="card">
+          <div class="cardInner cardInner_flip">
+            <div class="cardFront cardFront_flip cardFront_flip_qa">
+              <p>QA</p>
+            </div>
+            <div class="cardBack cardBack_flip">
+              <p class="text">Advanced online course focusing on the finer points of QA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cardsContainer__item cardsContainer__item_js">
+        <div class="card">
+          <div class="cardInner cardInner_flip">
+            <div class="cardFront cardFront_flip cardFront_flip_js">
+              <p>JS</p>
+            </div>
+            <div class="cardBack cardBack_flip">
+              <p class="text">An online intensive course on building web aplications with JavaScript</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cardsContainer__item cardsContainer__item_java">
+        <div class="card">
+          <div class="cardInner">
+            <div class="cardFront cardFront_down cardFront_down_java">
+              <p>Java</p>
+            </div>
+            <div class="cardBack cardBack_down">
+              <p class="text">Advanced online course on building web aplications with Java</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cardsContainer__item cardsContainer__item_php">
+        <div class="card">
+          <div class="cardInner">
+            <div class="cardFront cardFront_topRightCorner cardFront_topRightCorner_php">
+              <p>php</p>
+            </div>
+            <div class="cardBack cardBack_topRightCorner">
+              <p class="text">An online intensive course on building web aplications with PHP</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cardsContainer__item cardsContainer__item_dotNet">
+        <div class="card">
+          <div class="cardInner">
+            <div class="cardFront cardFront_bottomRightCorner cardFront_bottomRightCorner_dotNet">
+              <p>.NET</p>
+            </div>
+            <div class="cardBack cardBack_bottomRightCorner">
+              <p class="text">An online intensive course on building web aplications with .NET</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cardsContainer__item cardsContainer__item_events">
+        <div class="card">
+          <div class="cardInner">
+            <div class="cardFront cardFront_right cardFront_right_events">
+              <p>Events</p>
+            </div>
+            <div class="cardBack cardBack_right">
+              <p class="text text_scroll text_scroll_1">У березні-квітні відбулася серія наших онлайн трансляцій по веб-розробці під кодовою назвою Homeference. Ми на деякий час залишимо посилання на запис трансляцій нижче. Дивись, шарь з друзями, а щоб не пропустити майбутні події - підписуйся <a href="#">телеграм Binary Studio Academy</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cardsContainer__item cardsContainer__item_blog">
+        <div class="card">
+          <div class="cardInner">
+            <div class="cardFront cardFront_right cardFront_right_blog">
+              <p>Blog</p>
+            </div>
+            <div class="cardBack cardBack_right">
+              <p class="text text_scroll text_scroll_2">Ділимося інсайтами Академії, досвідом створення world-class проектів та роздумами про життя, код, роботу.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cardsContainer__item cardsContainer__item_contacts">
+        <div class="card">
+          <div class="cardInner">
+            <div class="cardFront cardFront_right cardFront_right_contacts">
+              <p>Contacts</p>
+            </div>
+            <div class="cardBack cardBack_right">
+              <div class="cardBack__icons">
+                <i class="fab fa-facebook contactIcons"></i>
+                <i class="fab fa-telegram contactIcons"></i>
+                <i class="fab fa-instagram contactIcons"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="notification">
+    <label class="notification__show" for="toggle2"><i class="fas fa-comment-dots closeSign"></i></label>
+    <input type="checkbox" id="toggle2">  
+    <div class="showMessages">
+
+      <div class="notification__item notification__item_error">
+        <i class="fas fa-exclamation-circle statusSign"></i>
+        <div class="notificationContainer">
+          <p class="notificationContainer__header">Error</p>
+          <p class="notificationContainer__content">Something went wrong. Please try again later.</p>
+        </div>
+      </div>
+      <div class="notification__item notification__item_success">
+        <i class="fas fa-check-circle statusSign"></i>
+        <div class="notificationContainer">
+          <p class="notificationContainer__header">Success</p>
+          <p class="notificationContainer__content">Profile was updated.</p>
+        </div>
+      </div>
+      <div class="notification__item notification__item_warning">
+        <i class="fas fa-check-circle statusSign"></i>
+        <div class="notificationContainer">
+          <p class="notificationContainer__header">Warning</p>
+          <p class="notificationContainer__content">Deadline is coming.</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <footer>&#169; Powered by Binary Studio Team</footer>
+</body>
+</html>

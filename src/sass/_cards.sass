@@ -1,0 +1,290 @@
+.cardsContainer
+  width: 100%
+  height: 100%
+  margin: 130px 0 0 0
+  display: grid
+  grid-template-columns: 25% 25% 30% 20%
+  grid-template-rows: repeat(8, 5.16vw)
+
+.cardsContainer__item
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  color: white
+  font-size: 1.5vw
+  &>p
+    margin: 1vw
+  &_binaryStudio
+    grid-area: 1/1/5/2
+  &_qa
+    grid-area: 5/1/9/2
+    font-size: 7vw
+  &_js
+    grid-area: 1/2/7/3
+    font-size: 8vw
+    line-height: 7vw
+  &_java
+    grid-area: 7/2/9/3
+    font-size: 3.5vw
+  &_php
+    grid-area: 1/3/4/5
+    font-size: 7vw
+  &_dotNet
+    grid-area: 4/3/9/4
+    font-size: 6vw
+  &_events
+    grid-area: 4/4/6/5
+  &_blog
+    grid-area: 6/4/8/5
+  &_contacts
+    grid-area: 8/4/9/5
+
+.binary_logo
+  width: 50%
+
+.join_button
+  background-color: #1379da
+  border: none
+  color: white
+  padding: 0.9vw 2.8vw
+  text-align: center
+  text-decoration: none
+  display: inline-block
+  font-size: 1.5vw
+  cursor: pointer
+  border-radius: 0.3vw
+  &:hover
+    background-color: #0363bd
+
+.text
+  font-size: 1.3vw
+  color: black
+  text-align: left
+  font-weight: bold
+  line-height: 1.6vw
+  margin: 1vw
+
+.text_scroll
+  height: 90%
+  margin: 1vw 0 1vw 1vw
+  padding-right: 1vw
+  overflow-y: scroll
+  font-weight: normal
+
+.card
+  background-color: transparent
+  width: 100%
+  height: 100%
+  perspective: 1000px
+
+.cardInner
+  position: relative
+  width: 100%
+  height: 100%
+  text-align: center
+  transition: transform 0.6s
+  transform-style: preserve-3d
+
+.card:hover .cardInner
+  &_flip
+    transform: rotateY(180deg)
+
+.card:hover .cardFront
+  &_down
+    height: 0
+    font-size: 0
+  &_topRightCorner
+    height: 0
+    width: 0
+    font-size: 0
+    right: 0
+    top: 0
+  &_bottomRightCorner
+    height: 0
+    width: 0
+    font-size: 0
+    right: 0
+    bottom: 0
+  &_right
+    width: 0
+    font-size: 0
+    right: 0
+
+.cardFront, .cardBack
+  position: absolute
+  width: 100%
+  height: 100%
+  backface-visibility: hidden
+
+.cardFront
+  background-color: #fff
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+
+.cardBack
+  background-color: #fff
+  color: white
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  &_flip
+    transform: rotateY(180deg)
+
+.cardFront
+  &_flip
+    &_qa
+      background-color: #3E985E
+    &_js
+      background-color: #F5C968
+      font-weight: bold
+      align-items: flex-end
+      justify-content: flex-end
+      color: #000000
+  &_down
+    &_java
+      background-color: #BD233A
+      transition: all 0.4s ease
+      z-index: 3
+      bottom: 0
+  &_topRightCorner
+    &_php
+      background-color: #7D88B5
+      font-style: italic
+      font-weight: 300
+      color: #000000
+      transition: all 0.4s ease
+      z-index: 3
+      top: 0
+      right: 0
+  &_bottomRightCorner
+    &_dotNet
+      background-color: #471854
+      transition: all 0.4s ease
+      z-index: 3
+      bottom: 0
+      right: 0
+  &_right
+    transition: all 0.4s ease
+    z-index: 3
+    right: 0
+    &_events
+      background-color: #2B8FF9
+    &_blog
+      background-color: #03378C
+    &_contacts
+      background-color: #021940
+
+.contactIcons
+  margin: 0 0.3vw
+  font-size: 2.4vw
+  color: black
+  &:hover
+    color: #2B8FF9
+    cursor: pointer
+
+.notification
+  position: absolute
+  bottom: 20px
+  right: 20px
+  z-index: 103
+  display: flex
+
+.showMessages
+  margin-top: 8px
+  display: block
+
+#toggle2
+  display: none
+
+#toggle2:checked + .showMessages
+  display: none
+
+.notification__item
+  box-sizing: content-box
+  padding: 20px
+  width: 220px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  font-size: 17px
+  line-height: 21px
+  color: white
+  opacity: 0.9
+  margin-top: 20px
+  &_success
+    background-color: #00a732
+  &_error
+    background-color: #ca1414
+  &_warning
+    background-color: #e79e00
+
+.notificationContainer
+  width: 175px
+  &__header
+    font-size: 20px
+    opacity: 0.9
+  &__content
+    font-weight: 300
+    opacity: 0.9
+
+.statusSign
+  font-size: 24px
+  opacity: 0.9
+
+.closeSign
+  font-size: 30px
+  color: #ffae00
+  transform: scale(-1, 1)
+
+@media screen and ( max-width: 969px)
+
+  .join_button
+    padding: 1vw 3.5vw
+    font-size: 3vw
+    border-radius: 0.4vw
+
+  .cardsContainer
+    grid-template-columns: 45% 5% 30% 20%
+    grid-template-rows: repeat(20, 4.4vw)
+
+  .cardsContainer__item
+    &>p
+      margin: 1vw
+    &_binaryStudio
+      grid-area: 1/1/10/2
+    &_qa
+      grid-area: 16/1/21/3
+      font-size: 7vw
+    &_js
+      grid-area: 1/2/11/4
+      font-size: 8vw
+      line-height: 7vw
+    &_java
+      grid-area: 11/1/16/3
+      font-size: 3.5vw
+    &_php
+      grid-area: 11/3/16/5
+      font-size: 7vw
+    &_dotNet
+      grid-area: 16/3/21/5
+      font-size: 6vw
+    &_events
+      grid-area: 1/4/5/5
+    &_blog
+      grid-area: 5/4/9/5
+    &_contacts
+      grid-area: 9/4/11/5
+
+  .contactIcons
+    margin: 0 0.4vw
+    font-size: 3vw
+    color: black
+
+  .text
+    font-size: 1.6vw
+    line-height: 1.8vw
+    margin: 1.5vw
